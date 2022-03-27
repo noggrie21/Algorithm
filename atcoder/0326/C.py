@@ -1,3 +1,7 @@
+import sys
+sys.stdin = open('cinput.txt')
+
+for tc in range(int(input())):
 # def check(arr):
 #     for i in range(1, N):
 #         if abs(arr[i]-arr[i-1]) > K:
@@ -27,58 +31,68 @@
 #
 #
 
-def find_idx():
-    global ai
-    global bi
-    for i in range(N-1):
-        if abs(a[i] - a[i+1]) > K:
-            ai = i
-            break
-    for i in range(N - 1):
-        if abs(b[i] - b[i+1]) > K:
-            bi = i
-            break
+    def find_idx():
+        global ai
+        global bi
+
+        if N == 1:
+            return
+
+        for i in range(N-1):
+            if abs(a[i] - a[i+1]) > K:
+                ai = i
+                break
+
+        for i in range(N-1):
+            if abs(b[i] - b[i+1]) > K:
+                bi = i
+                break
+
+
+
+
+
+    N, K = map(int, input().split())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    result = 'No'
+    ai = bi = N
+    find_idx()
+    print(ai, bi)
 
 
 def DFS(i, n, end, lst):
-    print('뭐가오나 보자 n:', n, 'end:', end, lst, i)
+    print(lst)
     if n == end:
-        print('첫번째 분기:', n, end, lst, i)
+        print('여긴 재귀의 끝')
         return 1
     elif 1 <= n <= end - 1:
-        print('두번째 분기:', n, end, lst, i)
-        if abs(lst[n] - lst[n-1]) > K:
-            print('여기옴?')
+        print('여긴 중간')
+        if abs(lst[n] - lst[n - 1]) > K:
+            print('k보다 크다')
             return
-    print('재귀호출 직전:', n, end, lst, i)
-    if DFS(i+1, n+1, end, lst+[a[i]]):
+
+    if DFS(i + 1, n + 1, end, lst + [a[i]]):
         return 1
-    if DFS(i+1, n+1, end, lst+[b[i]]):
+    if DFS(i + 1, n + 1, end, lst + [b[i]]):
         return 1
 
 
-N, K = map(int, input().split())
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
-result = 'No'
-ai = bi = N
-find_idx()
 
-
-if ai == N or bi == N:
-    result = 'Yes'
-elif ai >= bi:
-    a.append(0)
-    b.append(0)
-    if DFS(ai+1, 0, N-ai, [b[ai]]) or DFS(bi+1, 0, N-bi, [a[bi]]):
+    if ai == N or bi == N:
         result = 'Yes'
-else:
-    a.append(0)
-    b.append(0)
-    if DFS(bi+1, 0, N-bi, [a[bi]]) or DFS(ai+1, 0, N-ai, [b[ai]]):
-        result = 'Yes'
+    elif ai >= bi:
+        a.append(0)
+        b.append(0)
+        if DFS(ai+1, 0, N-ai, a[:ai] + [b[ai]]) or DFS(bi+1, 0, N-bi, b[:bi] + [a[bi]]):
+            result = 'Yes'
+    else:
+        a.append(0)
+        b.append(0)
+        if DFS(bi+1, 0, N-bi, b[:bi] + [a[bi]]) or DFS(ai+1, 0, N-ai, a[:ai] + [b[ai]]):
+            result = 'Yes'
 
-print(result)
+    print(result)
 
 # X 배열의 특징
 # 1. 길이가 N
