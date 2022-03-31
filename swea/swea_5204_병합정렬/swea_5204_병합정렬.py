@@ -55,6 +55,7 @@ for tc in range(1, T+1):
     arr = list(map(int, input().split()))
     cnt = 0
     result = merge_sort(arr)
+    print(result)
     print(f'#{tc} {result[N//2]} {cnt}')
 
 
