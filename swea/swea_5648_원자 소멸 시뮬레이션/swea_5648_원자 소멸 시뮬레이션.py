@@ -4,11 +4,16 @@ sys.stdin = open('sample_input.txt', 'r')
 
 def simulate():
     lst = []
+
     for i in range(N - 1):
         for j in range(i + 1, N):
-            distance = gradient(atom[i], atom[j])   # 두 원자가 부딪힐 수 있으면 distance = 충돌 지점과 원자들의 거리의 합, 부딪히지 않으면 distance = None
-            if distance:                            # distance가 유효한 값이라면
-                lst.append([distance / 2, i, j])    # distance / 2: 충돌 지점과의 거리, 어떤 원자가 충돌하는 지를 lst에 추가
+
+            # 두 원자가 부딪힐 수 있으면 distance = 충돌 지점과 원자들의 거리의 합, 부딪히지 않으면 distance = None
+            distance = gradient(atom[i], atom[j])
+
+            if distance:
+                lst.append([distance / 2, i, j])    # distance / 2: 충돌 지점과의 거리, 어떤 원자가 충돌하는 지 lst 기록
+
     return lst
 
 
@@ -82,16 +87,15 @@ def check_diretion(m, x, y, arr1, arr2):
                 return True
 
 
-def collide():
+def collide(arr):
     global ans
 
     disappear = [0] * N  # 소멸 여부를 확인하고, 값으로 충돌지점과의 거리를 기록
 
-    for distance, i, j in collision:
+    for distance, i, j in arr:
 
         if not disappear[i] and not disappear[j]:
-            ans += atom[i][3]
-            ans += atom[j][3]
+            ans += (atom[i][3] + atom[j][3])
             disappear[i] = disappear[j] = distance
 
         elif disappear[i] == distance and not disappear[j]:
@@ -108,12 +112,19 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     atom = [list(map(int, input().split())) for _ in range(N)]
-    collision = []
     ans = 0
+
+    # 원자가 2 이상일 때에만, 소멸이 발생할 수 있는지 확인하면 된다.
     if N >= 2:
-        candidatates = simulate()   # simulate 함수를 통해 어떤 원자들이 소멸할 수 있는지 후보를 고름
-        candidatates.sort()         # 먼저 소멸되는 경우가 있기 때문에 충돌지점과의 거리가 가까운 순으로 정렬시켜서 (그림 속 A와 G는 기울기와 방향만 보면 충돌할 수 있으나, 그 전에 소멸)
-        collide()                   # collide 함수를 호출
+
+        # simulate 함수를 통해 어떤 원자들이 소멸할 수 있는지 후보를 고름
+        candidatates = simulate()
+
+        # 먼저 소멸되는 경우가 있기 때문에 충돌지점과의 거리가 가까운 순으로 정렬시켜서
+        # (그림 속 A와 G는 기울기와 방향만 보면 충돌할 수 있으나, 그 전에 소멸)
+        candidatates.sort()
+
+        # collide 함수를 호출(실제로 충돌할 원자를 가려냄)
+        collide(candidatates)
+
     print(f'#{tc} {ans}')
-
-

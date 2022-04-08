@@ -1,3 +1,7 @@
+import sys
+sys.stdin = open('sampleinput.txt')
+
+
 def DFS(n, kg, v, lst):
     print(f'n:{n} kg:{kg} v:{v} lst:{lst}')
     global maxV
@@ -18,6 +22,12 @@ N, K = map(int, input().split())
 item = [list(map(int, input().split())) for _ in range(N)]
 maxV = 0
 cnt = 0
-DFS(0, 0, 0, [])
+item.sort(key=lambda x: (x[1], -x[0]), reverse=True)
+# isort(list(item), ((item[0], True), (item[1], False)))
+print(item)
+# DFS(0, 0, 0, [])x[1]
+# print(cnt)
+
 print(maxV)
-print(cnt)
+
+

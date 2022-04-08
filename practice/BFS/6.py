@@ -17,8 +17,6 @@ def BFS(si, sj, end):
                 visited[ni][nj] = visited[i][j] + 1
 
 
-
-
 N = 4
 arr = [list(map(int, input().split())) for _ in range(N)]
 

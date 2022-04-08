@@ -5,7 +5,7 @@ T = int(input())
 
 
 def binary_search(start, end, key):
-    old = 2                             # old: 이전 탐색 방향을 기록용 (초기화: 왼쪽, 오른쪽과 다른 값)
+    old = 2                             # old: 이전 탐색 방향을 기록용 (초기화: 왼쪽(0), 오른쪽(1)과 다른 값)
 
     while start <= end:
         middle = (start + end) // 2
@@ -17,6 +17,7 @@ def binary_search(start, end, key):
 
             if not old ^ 0:             # 이전 탐색 방향과 같으면
                 return                  # 탐색 종료
+
             else:                       # 다르면,
                 end = middle - 1        # end 조정
                 old = 0                 # 방향 왼쪽(0)으로 기록
@@ -25,6 +26,7 @@ def binary_search(start, end, key):
 
             if not old ^ 1:             # 이전 탐색 방향 같으면
                 return                  # 탐색 종료
+
             else:                       # 다르면,
                 start = middle + 1      # start 조정
                 old = 1                 # 방향 오른쪽(1)으로 기록

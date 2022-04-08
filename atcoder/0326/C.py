@@ -1,7 +1,70 @@
 import sys
 sys.stdin = open('cinput.txt')
 
+def find_idx():
+    global ai
+    global bi
+
+    if N == 1:
+        return
+
+    for i in range(N-1):
+        if abs(a[i] - a[i+1]) > K:
+            ai = i
+            break
+
+    for i in range(N-1):
+        if abs(b[i] - b[i+1]) > K:
+            bi = i
+            break
+
+
+def DFS(i, lst):
+    print(lst)
+    if i == N:
+        print('여긴 재귀의 끝')
+        return 1
+    elif 1 <= i <= N-1:
+        print('여긴 중간')
+        if abs(lst[i] - lst[i-1]) > K:
+            print('k보다 크다')
+            return
+
+    if DFS(i + 1, lst + [a[i]]):
+        return 1
+    if DFS(i + 1, lst + [b[i]]):
+        return 1
+
+
 for tc in range(int(input())):
+    N, K = map(int, input().split())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    result = 'No'
+    ai = bi = N
+    find_idx()
+    print(ai, bi)
+
+    if ai == N or bi == N:
+        result = 'Yes'
+    elif ai >= bi:
+        a.append(0)
+        b.append(0)
+        if DFS(ai+1, a[:ai] + [b[ai]]) or DFS(bi+1, b[:bi] + [a[bi]]):
+            result = 'Yes'
+    else:
+        a.append(0)
+        b.append(0)
+        if DFS(bi+1, b[:bi] + [a[bi]]) or DFS(ai+1, a[:ai] + [b[ai]]):
+            result = 'Yes'
+
+    print(result)
+
+
+
+
+
+
 # def check(arr):
 #     for i in range(1, N):
 #         if abs(arr[i]-arr[i-1]) > K:
@@ -31,68 +94,10 @@ for tc in range(int(input())):
 #
 #
 
-    def find_idx():
-        global ai
-        global bi
-
-        if N == 1:
-            return
-
-        for i in range(N-1):
-            if abs(a[i] - a[i+1]) > K:
-                ai = i
-                break
-
-        for i in range(N-1):
-            if abs(b[i] - b[i+1]) > K:
-                bi = i
-                break
 
 
 
 
-
-    N, K = map(int, input().split())
-    a = list(map(int, input().split()))
-    b = list(map(int, input().split()))
-    result = 'No'
-    ai = bi = N
-    find_idx()
-    print(ai, bi)
-
-
-def DFS(i, n, end, lst):
-    print(lst)
-    if n == end:
-        print('여긴 재귀의 끝')
-        return 1
-    elif 1 <= n <= end - 1:
-        print('여긴 중간')
-        if abs(lst[n] - lst[n - 1]) > K:
-            print('k보다 크다')
-            return
-
-    if DFS(i + 1, n + 1, end, lst + [a[i]]):
-        return 1
-    if DFS(i + 1, n + 1, end, lst + [b[i]]):
-        return 1
-
-
-
-    if ai == N or bi == N:
-        result = 'Yes'
-    elif ai >= bi:
-        a.append(0)
-        b.append(0)
-        if DFS(ai+1, 0, N-ai, a[:ai] + [b[ai]]) or DFS(bi+1, 0, N-bi, b[:bi] + [a[bi]]):
-            result = 'Yes'
-    else:
-        a.append(0)
-        b.append(0)
-        if DFS(bi+1, 0, N-bi, b[:bi] + [a[bi]]) or DFS(ai+1, 0, N-ai, a[:ai] + [b[ai]]):
-            result = 'Yes'
-
-    print(result)
 
 # X 배열의 특징
 # 1. 길이가 N

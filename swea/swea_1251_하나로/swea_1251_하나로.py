@@ -9,29 +9,27 @@ def MST(s):
     global tc
     mst = [-1] * N                                                          # mst에 등록 여부와 노드번호를 인덱스로 하여 해당 노드로 가기 위한 최소 비용이 값으로 담길 예정
     mst[s] = 0                                                              # 시작 정점의 비용은 0
+    ans = 0
 
     # 초기 값이 들어있지 않을 때까지(=모든 정점이 mst에 등록될 때까지) 반복
     while -1 in mst:
-        minV = 3*10**12                                                     # 비용의 최댓값보다 큰 수로 초기화
+        minV = 2*10**12+1                                                     # 비용의 최댓값보다 큰 수로 초기화
         node = -1                                                           # 인덱스로 나오지 않는 수로 초기화
 
         # mst에 등록된 노드와 인접한 노드 중에서
         for rn in range(N):
-            if 0 <= mst[rn]:
+            if -1 < mst[rn]:
 
-                # mst에 미등록 되어있으며
+                # mst에 미등록 되어있으며 최소 비용을 가진 노드 찾기
                 for urn in range(N):
-                    if mst[urn] < 0:
-
-                        # 최소 비용을 가진 노드 찾기
-                        if adjM[rn][urn] < minV:
-                            minV = adjM[rn][urn]
-                            node = urn
+                    if mst[urn] < 0 and adjM[rn][urn] < minV:
+                        minV = adjM[rn][urn]
+                        node = urn
 
         # mst에 등록하기
-        mst[node] = minV
-
-    return round(E*(sum(mst)))
+        mst[node] = 1
+        ans += minV
+    return int(E*ans+0.5)
 
 
 for tc in range(1, T+1):

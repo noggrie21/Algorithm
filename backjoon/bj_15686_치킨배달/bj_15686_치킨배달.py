@@ -47,3 +47,4 @@ ans = 100000
 nCr(0, M, 0, len(chicken))
 
 print(ans)
+
