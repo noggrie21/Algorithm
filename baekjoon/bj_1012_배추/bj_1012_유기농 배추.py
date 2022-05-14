@@ -31,12 +31,6 @@ for _ in range(T):
     for r in range(N):
         for c in range(M):
             if field[r][c]:
-                ans += 1
-                field[r][c] = 0
-                while
-                for dr, dc in (1, 0), (-1, 0), (0, 1), (0, -1):
-                    nr, nc = r + dr, c + dc
-                    if 0 <= nr < N and 0 <= nc < M and field[nr][nc]:
-                        field[nr][nc] = 0
+                ans += bfs(r, c)
 
     print(ans)
