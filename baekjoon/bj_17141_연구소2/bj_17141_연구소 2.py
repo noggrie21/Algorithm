@@ -5,25 +5,23 @@ from itertools import combinations
 
 def search_point(area, point):
     '''
-    :param area: 연구소 같은 탐색 대상이 되는 2차원 배열
+    :param area: 탐색 대상이 되는 2차원 배열
     :param point: 탐색 기준이 되는 점수
-    :return: 탐색 결과(갯수, 탐색 기준에 부합하는 좌표 배열)
+    :return: 탐색 결과(탐색 기준에 부합하는 좌표 배열)
     '''
-    n = 0
     points = []
 
     for r in range(N):
         for c in range(N):
             if area[r][c] == point:
-                n += 1
                 points.append((r, c))
 
-    return n, points
+    return points
 
 
 def BFS(selected):
     '''
-    :param selected: 바이러스 놓을 좌표 배열
+    :param selected: r개의 바이러스 놓을 좌표 배열
     :return: 바이러스가 퍼지는 시간, 바이러스가 퍼진 실험실 상태
     '''
     q = deque()
@@ -49,30 +47,18 @@ def BFS(selected):
     return copy_lab[cr][cc]-1, copy_lab
 
 
-def nCr(r, start, last, selected):
+def nCr(n, r):
     '''
-    :param r: 바이러스 개수
-    :param start: 조합의 범위 시작점
-    :param last: 조합의 범위 끝점
-    :param selected: 선택된 조합이 담긴 배열
+    :param n: 바이러스 배치 가능한 좌표 배열
+    :param r: 바이러스 배치 갯수
     '''
     global answer
 
-    # 기저 파트
-    if not r:
+    for selected in combinations(n, r):
         times, copy_lab = BFS(selected)
 
-        if not search_point(copy_lab, 0)[0]:
-           answer = min(answer, times)
-
-        return
-
-    # 유도 파트
-    else:
-        for i in range(start, last):
-            nCr(r-1, i+1, last, selected + [points[i]])
-
-        return
+        if not search_point(copy_lab, 0):
+            answer = min(answer, times)
 
 
 N, M = map(int, input().split())
@@ -80,9 +66,9 @@ N, M = map(int, input().split())
 lab = [list(map(int, input().split())) for _ in range(N)]
 answer = 2500
 
-n, points = search_point(lab, 2)
+points = search_point(lab, 2)
 
-nCr(M, 0, n, [])
+nCr(points, M)
 
 if answer == 2500:
     print(-1)
