@@ -1,10 +1,24 @@
 N = int(input())
 
-S = [1]
+s = [1]
 
 if N == 1:
-    print(*S)
+    print(*s)
 else:
     for n in range(2, N+1):
-        S = S + [n] + S
-    print(*S)
+        s = s + [n] + s
+    print('10번째', *s)
+
+
+S = '1'
+
+if N == 1:
+    print(S)
+else:
+    for n in range(2, N+1):
+        S = S + f'{n}' + S
+    print('20번째', ' '.join(S))
+print(s)
+print(list(map(int, S)))
+if s == list(map(int, S)):
+    print('Yes')

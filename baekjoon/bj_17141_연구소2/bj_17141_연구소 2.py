@@ -1,4 +1,6 @@
 from copy import deepcopy
+from collections import deque
+from itertools import combinations
 
 
 def search_point(area, point):
@@ -24,7 +26,9 @@ def BFS(selected):
     :param selected: 바이러스 놓을 좌표 배열
     :return: 바이러스가 퍼지는 시간, 바이러스가 퍼진 실험실 상태
     '''
-    q = selected
+    q = deque()
+    q.extend(selected)
+
     copy_lab = deepcopy(lab)
 
     for r, c in points:
@@ -34,7 +38,7 @@ def BFS(selected):
             copy_lab[r][c] = 0
 
     while q:
-        cr, cc = q.pop(0)
+        cr, cc = q.popleft()
 
         for dr, dc in (0, 1), (0, -1), (1, 0), (-1, 0):
             nr, nc = cr + dr, cc + dc
@@ -67,6 +71,7 @@ def nCr(r, start, last, selected):
     else:
         for i in range(start, last):
             nCr(r-1, i+1, last, selected + [points[i]])
+
         return
 
 

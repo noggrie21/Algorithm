@@ -1,4 +1,4 @@
-from functools import reduce
+from collections import deque
 
 
 # num번 톱니의 왼쪽편 확인
@@ -74,3 +74,8 @@ answer = check(wheels)
 print(answer)
 
 
+boxes = ['apple', 'banana', 'pear']
+box = iter(boxes)
+print(box)
+print(type(box))
+print(next(box,'pear'))

@@ -3,6 +3,7 @@ T = int(input())
 
 def settings(text):
     global result
+
     lst = [0] * N
     cnt = 0
 
@@ -29,11 +30,14 @@ for tc in range(T):
     answer = 0
 
     mixed = result.count(1)
+
     if mixed:
         if initial_cnt == target_cnt:
             answer = mixed // 2
         else:
-            answer = (mixed - abs(initial_cnt - target_cnt)) // 2 + abs(initial_cnt - target_cnt)
+            diff = abs(initial_cnt - target_cnt)
+            answer = (mixed - diff) // 2 + diff
+
     print(answer)
 
 

@@ -15,11 +15,13 @@ def nCr(r, start, last, removals):
 
     # 기저 파트
     if not r:
-        print(removals)
+        # print('removals', removals)
         # print(words)
-        temp = word
-        words = filtering(words, removals)
-        answer = max(answer, N-len(words))
+        temp = deepcopy(words)
+        temp = filtering(temp, removals)
+        # print(temp)
+        # print(list(filter(None, temp)))
+        answer = max(answer, N-len(list(filter(None, temp))))
         return
 
     # 유도 파트
@@ -35,14 +37,14 @@ words = list(set(input()) for _ in range(N))
 
 if K >= 5:
     words = filtering(words, 'antic')
-    print('words', words)
+    # print('words', words)
 
     alphabets = set()
     for word in words:
-        print(word)
+        # print(word)
         alphabets = alphabets.union(word)
     alphabets = ''.join(alphabets)
-    print('alphabets', alphabets)
+    # print('alphabets', alphabets)
 
     nCr(K-5, 0, len(alphabets), [])
 
