@@ -1,5 +1,5 @@
 def make_title(content, space, alphabet):
-    old = 32
+    old = ord(' ')
     i = 0
     N = len(content)
     title = ''
@@ -11,13 +11,13 @@ def make_title(content, space, alphabet):
         if old != ascii:
 
             # 스페이스 였을 때,
-            if ascii == 32:
+            if ascii == ord(' '):
 
-                # 입력 횟수가 남지 않았으면,
+                # 입력 가능 횟수가 0이면,
                 if not space:
-                    return -1   # 함수 종료
+                    return -1   # (입력 불가로) 함수 종료
 
-                # 남았다면
+                # 입력할 수 있으면
                 space -= 1      # 입력 가능 횟수 차감
                 old = ascii     # 이전 기록 갱신
 
@@ -25,13 +25,15 @@ def make_title(content, space, alphabet):
             else:
 
                 # 소문자인 경우 대문자 코드로 변환(해당 알파벳 입력 가능한지 확인하기 위해 통일)
-                if ascii >= 97:
-                    ascii -= 32
+                if ascii >= ord('a'):
+                    ascii -= ord('a') - ord('A')
 
+                # 입력 횟수가 남지 않았으면,
                 if not alphabet[ascii]:
-                    return -1
+                    return -1   # 함수 종료
 
-                if old == 32:
+                # 시의 제목으로
+                if old == ord(' '):
                     title += chr(ascii)
                     content.append(ascii)
                     N += 1
