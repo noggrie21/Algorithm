@@ -8,27 +8,30 @@ def DFS(node):
         v = stack.pop()
         # print(stack)
 
-        for i in range(1, N+1):
-            if weights[v][i] and visited[i] < 0:
+        for nv, nw in weights[v]:
+            if visited[nv] < 0:
                 # print("v", "i", v, i)
-                stack.append(i)
-                visited[i] = visited[v] + weights[v][i]
+                stack.append(nv)
+                visited[nv] = visited[v] + nw
 
-                if far_node_diff[1] < visited[i]:
-                    far_node_diff = [i, visited[i]]
+                if far_node_diff[1] < visited[nv]:
+                    far_node_diff = [nv, visited[nv]]
 
     # print(visited, v, visited[v])
-    print()
+    # print()
     return far_node_diff
 
 
 N = int(input())
 
-weights = [[0] * (N+1) for _ in range(N+1)]
+weights = [[] for _ in range(N+1)]
 
 for _ in range(N-1):
     parent, child, weight = map(int, input().split())
-    weights[parent][child] = weights[child][parent] = weight
+    weights[parent].append([child, weight])
+    weights[child].append([parent, weight])
+
+# print(weights)
 
 # print(weights)
 start, diff = DFS(1)
