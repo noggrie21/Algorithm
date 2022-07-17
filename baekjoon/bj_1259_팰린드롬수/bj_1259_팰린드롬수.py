@@ -10,3 +10,6 @@ words = list(input())
 while words != ['0']:
     check()
     words = list(input())
+
+alphabet = ['a', 'b']
+alphabet.append(object)
