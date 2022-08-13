@@ -11,7 +11,7 @@ while tree:
   else:
       kinds[tree] = 1
   tree = sys.stdin.readline().rstrip()
-# sorted_kinds = sorted(list(kinds))
+sorted_kinds = sorted(list(kinds))
 
-for kind in sorted(kinds.items()):
+for kind in sorted_kinds:
   print(kind, f'{kinds[kind]/total * 100:0.4f}')
