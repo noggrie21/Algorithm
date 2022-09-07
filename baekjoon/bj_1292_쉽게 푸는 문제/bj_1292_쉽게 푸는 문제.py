@@ -1,8 +1,8 @@
 import sys
-limit_number = 15000
-sys.setrecursionlimit(limit_number)
+sys.setrecursionlimit(1003)
 
-def add(i, num, cnt, total, lst=[]):
+
+def add(i, num, cnt, total):
     global a
     global b
 
@@ -14,11 +14,13 @@ def add(i, num, cnt, total, lst=[]):
         return
 
     if num == cnt:
-        add(i+1, num+1, 1, total+num, lst+[num])
+        add(i+1, num+1, 1, total+num)
     else:
-        add(i+1, num, cnt+1, total+num, lst+[num])
+        add(i+1, num, cnt+1, total+num)
+
 
 A, B = map(int, input().split())
 a = b = 0
 add(1, 1, 1, 0)
+
 print(b-a)
