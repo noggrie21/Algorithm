@@ -33,3 +33,4 @@ def solution(queue1, queue2):
         answer = make_same(small, big, queue1, queue2)
 
     return answer
+

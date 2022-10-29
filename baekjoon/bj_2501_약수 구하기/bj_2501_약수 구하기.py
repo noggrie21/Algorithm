@@ -7,7 +7,7 @@ for i in range(1, N+1):
     if not N % i:
         k += 1
 
-        # K번째 약수면
+        # K번째 약수면 현재 숫자 answer에 할당
         if k == K:
             answer = i
             break
