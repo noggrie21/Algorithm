@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21eee0a5-4478-4714-8461-ba8ebddc3990" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algorithm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baekjoon/bj_1062_가르침/bj_1062_가르침.py" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/bj_1062_가르침/bj_1062_가르침.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baekjoon/bj_22856_트리 순회/bj_22856_트리 순회.py" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/bj_22856_트리 순회/bj_22856_트리 순회.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baekjoon/bj_2501_약수 구하기/bj_2501_약수 구하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/bj_2501_약수 구하기/bj_2501_약수 구하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baekjoon/bj_2636_치즈/bj_2636_치즈.py" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/bj_2636_치즈/bj_2636_치즈.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmers/2022 카카오/Lv.2_두 큐 합 같게 만들기.py" beforeDir="false" afterPath="$PROJECT_DIR$/programmers/2022 카카오/Lv.2_두 큐 합 같게 만들기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swea/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swea/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swea/.idea/swea.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swea/.idea/swea.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,15 +14,16 @@
     <session id="-2114371696">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="14" />
           <entry key="project.open.time.5" value="7" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -48,76 +41,38 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="py" value="32706" />
+          <entry key="py" value="33885" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="32706" />
+          <entry key="Python" value="33885" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6395474">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/swea_5656_벽돌깨기.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1007">
-                  <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-                  <folding>
-                    <element signature="e#0#29#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/swea/swea_1767_프로세서 연결하기/swea_1767_프로세서 연결하기.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="22" selection-start-line="22" selection-end-line="22" />
-                  <folding>
-                    <marker date="1666407633244" expanded="true" signature="1148:1451" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/swea/swea_5204_병합정렬/swea_5204_병합정렬.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/swea/swea_5203_babygin game/swea_5203_babygin_game.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/sample_input (1).txt">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/sample_input (1).txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="235">
-                  <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/sample_input (1).txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/baekjoon/bj_2531_회전초밥/bj_2531_회전초밥.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,13 +131,13 @@
         <option value="$PROJECT_DIR$/swea/swea_1767_프로세서 연결하기/swea_1767_프로세서 연결하기.py" />
         <option value="$PROJECT_DIR$/baekjoon/bj_14465_소가 길을 건너간 이유5/bj_14465_소가 길을 건너간 이유5.py" />
         <option value="$PROJECT_DIR$/swea/swea_5656_벽돌깨기/swea_5656_벽돌깨기.py" />
+        <option value="$PROJECT_DIR$/baekjoon/bj_2531_회전초밥/bj_2531_회전초밥.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2331" />
-    <option name="y" value="394" />
-    <option name="width" value="900" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -204,6 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,7 +233,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.swea_5656_벽돌깨기">
+  <component name="RunManager" selected="Python.bj_2531_회전초밥">
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -348,7 +303,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bj_18428_김시 피하기" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bj_2531_회전초밥" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -356,11 +311,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baekjoon/bj_18428_김시 피하기" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baekjoon/bj_2531_회전초밥" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baekjoon/bj_18428_김시 피하기/bj_18428_김시 피하기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baekjoon/bj_2531_회전초밥/bj_2531_회전초밥.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -434,19 +389,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.bj_2636_치즈" />
-      <item itemvalue="Python.bj_18428_김시 피하기" />
       <item itemvalue="Python.1" />
       <item itemvalue="Python.swea_1767_프로세서 연결하기" />
       <item itemvalue="Python.bj_14465_소가 길을 건너간 이유5" />
       <item itemvalue="Python.swea_5656_벽돌깨기" />
+      <item itemvalue="Python.bj_2531_회전초밥" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bj_2531_회전초밥" />
         <item itemvalue="Python.swea_5656_벽돌깨기" />
         <item itemvalue="Python.bj_14465_소가 길을 건너간 이유5" />
         <item itemvalue="Python.swea_1767_프로세서 연결하기" />
         <item itemvalue="Python.1" />
-        <item itemvalue="Python.bj_18428_김시 피하기" />
       </list>
     </recent_temporary>
   </component>
@@ -473,15 +428,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="124" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.028451001" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.027777778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17372422" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.0997807" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -755,12 +709,6 @@
     <entry file="file://$PROJECT_DIR$/coding-test/221021/3.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/swea/swea_5203_babygin game/swea_5203_babygin_game.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/sample_input (1).txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/baekjoon/bj_14465_소가 길을 건너간 이유5/bj_14465_소가 길을 건너간 이유5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -768,12 +716,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swea/swea_5204_병합정렬/swea_5204_병합정렬.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/swea_5656_벽돌깨기.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swea/swea_1767_프로세서 연결하기/swea_1767_프로세서 연결하기.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <marker date="1666407633244" expanded="true" signature="1148:1451" ph="..." />
@@ -781,13 +736,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/swea_5656_벽돌깨기.py">
+    <entry file="file://$PROJECT_DIR$/swea/swea_5204_병합정렬/swea_5204_병합정렬.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swea/swea_5203_babygin game/swea_5203_babygin_game.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swea/swea_5656_벽돌깨기/sample_input (1).txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="235">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baekjoon/bj_2531_회전초밥/bj_2531_회전초밥.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>
